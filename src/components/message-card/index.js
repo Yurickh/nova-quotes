@@ -3,11 +3,22 @@ import PropTypes from 'prop-types'
 
 import './styles.css'
 
+const cardColors = [
+	'#164683',
+	'#2b007b',
+	'#040212',
+	'#2b999e',
+	'#951403',
+	'#ef9830'
+]
+
 export default class MessageCard extends Component {
 	static propTypes = {
 		username: PropTypes.string,
 		message: PropTypes.string.isRequired,
 	}
+
+	backgroundColor = cardColors[Math.floor(Math.random()*cardColors.length)]
 
 	render() {
 		const {
@@ -17,20 +28,23 @@ export default class MessageCard extends Component {
 		} = this.props
 
 		return (
-			<div className="message-card">
-				{
-					avatar && (
-						<div className="avatar" style={{
-							backgroundImage: `url(${avatar})`,
-						}} />
-					)
-				}
+			<div className="message-card" style={{
+				backgroundColor: this.backgroundColor
+			}}>
+				<div />
 
-				<div className="info">
-					<p className="message">
-						{message}
-					</p>
+				<p className="message">
+					{message}
+				</p>
 
+				<div className="head">
+					{
+						avatar && (
+							<div className="avatar" style={{
+								backgroundImage: `url(${avatar})`,
+							}} />
+						)
+					}
 					<div className="username">
 						{username || 'Autor desconhecido'}
 					</div>
