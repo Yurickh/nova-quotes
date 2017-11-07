@@ -2,6 +2,8 @@
 @import 'ambience/breakpoints';
 
 .message-card {
+  overflow: hidden;
+
   padding: 1em;
 
   border-radius: 3px;

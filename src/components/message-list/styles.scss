@@ -4,7 +4,6 @@
   $list-width: 84vw;
 
   display: flex;
-  overflow: hidden;
   align-items: flex-start;
   flex-direction: column;
 
@@ -12,12 +11,14 @@
   padding: 3vw (100vw - $list-width)/2;
 
   @include medium-up {
+    padding-left: (100vw - $list-width)/2 - 2vw;
     flex-direction: row;
     flex-wrap: wrap;
   }
 
   & > .message-card {
     box-sizing: border-box;
+
     width: $list-width;
 
     @include responsive(margin-top, 20, 20);
@@ -25,23 +26,13 @@
       margin-left: 2vw;
     }
     @include medium-only {
-      width: $list-width - 4vw / 3 - 2vw;
+      width: $list-width / 3 - 2vw;
     }
     @include large-only {
       width: $list-width / 4 - 2vw;
     }
     @include huge-up {
       width: $list-width / 5 - 2vw;
-    }
-
-    &.slide-enter {
-      transform: translateX(100%);
-    }
-
-    &.slide-enter.slide-enter-active {
-      transform: translateX(0);
-
-      transition: transform .4s ease-in-out;
     }
   }
 }

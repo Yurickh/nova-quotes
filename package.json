@@ -14,8 +14,7 @@
     "npm-run-all": "^4.1.1",
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "react-transition-group": "1.x"
+    "react-dom": "^16.0.0"
   },
   "scripts": {
     "build-css": "node-sass-chokidar src/ --include-path ./src/ -o src/",
