@@ -4,6 +4,7 @@
   $list-width: 84vw;
 
   display: flex;
+  overflow: hidden;
   align-items: flex-start;
   flex-direction: column;
 
@@ -17,9 +18,12 @@
 
   & > .message-card {
     box-sizing: border-box;
-    margin-left: 2vw;
+    width: $list-width;
 
     @include responsive(margin-top, 20, 20);
+    @include medium-up {
+      margin-left: 2vw;
+    }
     @include medium-only {
       width: $list-width - 4vw / 3 - 2vw;
     }
@@ -28,6 +32,16 @@
     }
     @include huge-up {
       width: $list-width / 5 - 2vw;
+    }
+
+    &.slide-enter {
+      transform: translateX(100%);
+    }
+
+    &.slide-enter.slide-enter-active {
+      transform: translateX(0);
+
+      transition: transform .4s ease-in-out;
     }
   }
 }

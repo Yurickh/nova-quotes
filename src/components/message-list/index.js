@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { CSSTransitionGroup } from 'react-transition-group'
+
 import MessageCard from '../message-card'
 import firebase from '../../helpers/firebase'
 import asArray from '../../helpers/asArray'
@@ -26,7 +28,11 @@ export default class MessageList extends Component {
 		} = this.state
 
 		return (
-			<section className="message-list">
+			<CSSTransitionGroup
+				transitionName="slide"
+				transitionEnterTimeout={400}
+				transitionLeaveTimeout={400}
+				className="message-list">
 				{
 					// let's reverse it so newer messages are shown first
 					messages.reverse().map(message => (
@@ -37,7 +43,7 @@ export default class MessageList extends Component {
 						/>
 					))
 				}
-			</section>
+			</CSSTransitionGroup>
 		)
 	}
 }
