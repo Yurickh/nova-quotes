@@ -3,20 +3,26 @@
 exports[`MessageCard should render correctly 1`] = `
 <div
   className="message-card"
+  style={
+    Object {
+      "backgroundColor": "#951403",
+    }
+  }
 >
+  <div />
+  <p
+    className="message"
+  >
+    Test message
+  </p>
   <div
-    className="info"
+    className="head"
   >
     <div
       className="username"
     >
       Autor desconhecido
     </div>
-    <p
-      className="message"
-    >
-      Test message
-    </p>
   </div>
 </div>
 `;
