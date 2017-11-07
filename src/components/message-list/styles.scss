@@ -11,14 +11,14 @@
   padding: 3vw (100vw - $list-width)/2;
 
   @include medium-up {
-    padding-left: (100vw - $list-width)/2 - 1vw;
     flex-direction: row;
     flex-wrap: wrap;
+
+    padding-left: (100vw - $list-width)/2 - 1vw;
   }
 
   & > .message-card {
     box-sizing: border-box;
-
     width: $list-width;
     min-height: 50vh;
 
@@ -27,7 +27,7 @@
       margin-left: 1vw;
     }
     @include medium-only {
-      width: $list-width / 3 - 1vw;
+      width: $list-width / 2 - 1vw;
     }
     @include large-only {
       width: $list-width / 4 - 1vw;
