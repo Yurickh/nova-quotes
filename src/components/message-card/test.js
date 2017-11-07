@@ -6,7 +6,7 @@ import MessageCard from '.'
 
 describe('MessageCard', () => {
   it('should render correctly', () => {
-    const tree = shallow(<MessageCard />)
+    const tree = shallow(<MessageCard message="Test message"/>)
     expect(toJSON(tree)).toMatchSnapshot()
   })
 })

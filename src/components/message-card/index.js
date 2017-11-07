@@ -21,9 +21,9 @@ export default class MessageCard extends Component {
 					{username || 'Autor desconhecido'}
 				</div>
 
-				<div className="message">
+				<p className="message">
 					{message}
-				</div>
+				</p>
 			</div>
 		)
 	}

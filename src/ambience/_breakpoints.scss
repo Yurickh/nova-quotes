@@ -51,6 +51,12 @@ $breakpoint-huge: 1920px;
   }
 }
 
+
+// Gives a property responsive sizing behavior
+// Params:
+//    $property: the name of the property to be responsive
+//    $mobile: value in pixels that the property shall have @375w
+//    $value: optional value in pixels that the property shall have @1024, @1440 and @1920
 @mixin responsive($property, $mobile, $value: false) {
 
   // small-only
