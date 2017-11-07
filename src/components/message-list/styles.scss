@@ -1,0 +1,33 @@
+@import 'ambience/breakpoints';
+
+.message-list {
+  $list-width: 84vw;
+
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  margin: 0;
+  padding: 3vw (100vw - $list-width)/2;
+
+  @include medium-up {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  & > .message-card {
+    box-sizing: border-box;
+    margin-left: 2vw;
+
+    @include responsive(margin-top, 20, 20);
+    @include medium-only {
+      width: $list-width - 4vw / 3 - 2vw;
+    }
+    @include large-only {
+      width: $list-width / 4 - 2vw;
+    }
+    @include huge-up {
+      width: $list-width / 5 - 2vw;
+    }
+  }
+}

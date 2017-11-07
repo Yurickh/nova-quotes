@@ -1,0 +1,72 @@
+$breakpoint-small: 640px;
+$breakpoint-medium: 1024px;
+$breakpoint-large: 1440px;
+$breakpoint-huge: 1920px;
+
+@mixin medium-only {
+  @media (min-width: #{$breakpoint-small + 1px}) and (max-width: #{$breakpoint-medium}) {
+    @content;
+  }
+}
+
+@mixin large-only {
+  @media (min-width: #{$breakpoint-medium + 1px}) and (max-width: #{$breakpoint-large}) {
+    @content;
+  }
+}
+
+@mixin huge-only {
+  @media (min-width: #{$breakpoint-large + 1px}) and (max-width: #{$breakpoint-huge}) {
+    @content;
+  }
+}
+
+@mixin medium-up {
+  @media (min-width: #{$breakpoint-small + 1px}) {
+    @content;
+  }
+}
+
+@mixin large-up {
+  @media (min-width: #{$breakpoint-medium + 1px}) {
+    @content;
+  }
+}
+
+@mixin huge-up {
+  @media (min-width: #{$breakpoint-large + 1px}) {
+    @content;
+  }
+}
+
+@mixin medium-down {
+  @media (max-width: #{$breakpoint-medium}) {
+    @content;
+  }
+}
+
+@mixin large-down {
+  @media (max-width: #{$breakpoint-large}) {
+    @content;
+  }
+}
+
+@mixin responsive($property, $mobile, $value: false) {
+
+  // small-only
+  #{$property}: #{$mobile / 3.75}vw;
+
+  @if ($value) {
+    @include medium-only {
+      #{$property}:  #{$value / 10.24}vw;
+    }
+
+    @include large-only {
+      #{$property}: #{$value / 14.4}vw;
+    }
+
+    @include huge-up {
+      #{$property}: #{$value / 19.2}vw;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import "ambience/weight";
+
+.message-card {
+  padding: 1em;
+
+  box-shadow: 0 0 3px 0 #000;
+  border-radius: 4px;
+
+  & > .username {
+    font-weight: $weight-hairline;
+    letter-spacing: 1px;
+  }
+
+  & > .message {
+    margin-top: .5em;
+  }
+}

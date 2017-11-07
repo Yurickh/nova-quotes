@@ -1,0 +1,55 @@
+@import 'ambience/color';
+@import 'ambience/weight';
+
+.page-app {
+  position: relative;
+
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding-bottom: 4em;
+
+  & > .header {
+    padding: 2em 1em;
+    padding-top: 2em;
+
+    color: $color-spring;
+    background-color: $color-baltic-sea;
+    box-shadow: 1px 1px 1px 1px #000;
+  }
+
+  & > .header > .brand {
+    margin: 0;
+
+    color: $color-meadow;
+  }
+
+  & > .header > .description {
+    font-weight: $weight-hairline;
+
+    margin: 0;
+    margin-top: .5em;
+  }
+
+  & > .footer {
+    position: absolute;
+    bottom: 0;
+
+    box-sizing: border-box;
+    width: 100vw;
+    height: 4em;
+    padding: 1em;
+
+    color: $color-spring;
+    background-color: $color-baltic-sea;
+  }
+
+  & > .footer > span {
+    margin: 0 .25em;
+  }
+
+  & > .footer > .reference {
+    margin: 0 .25em;
+
+    color: $color-spring;
+  }
+}
