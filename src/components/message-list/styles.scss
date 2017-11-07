@@ -26,13 +26,13 @@
       margin-left: 2vw;
     }
     @include medium-only {
-      width: $list-width / 3 - 2vw;
+      width: $list-width / 2 - 2vw;
     }
     @include large-only {
-      width: $list-width / 4 - 2vw;
+      width: $list-width / 3 - 2vw;
     }
     @include huge-up {
-      width: $list-width / 5 - 2vw;
+      width: $list-width / 4 - 2vw;
     }
   }
 }

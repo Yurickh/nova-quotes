@@ -5,14 +5,18 @@ exports[`MessageCard should render correctly 1`] = `
   className="message-card"
 >
   <div
-    className="username"
+    className="info"
   >
-    Autor desconhecido
+    <div
+      className="username"
+    >
+      Autor desconhecido
+    </div>
+    <p
+      className="message"
+    >
+      Test message
+    </p>
   </div>
-  <p
-    className="message"
-  >
-    Test message
-  </p>
 </div>
 `;

@@ -13,17 +13,28 @@ export default class MessageCard extends Component {
 		const {
 			username,
 			message,
+			avatar,
 		} = this.props
 
 		return (
 			<div className="message-card">
-				<div className="username">
-					{username || 'Autor desconhecido'}
-				</div>
+				{
+					avatar && (
+						<div className="avatar" style={{
+							backgroundImage: `url(${avatar})`,
+						}} />
+					)
+				}
 
-				<p className="message">
-					{message}
-				</p>
+				<div className="info">
+					<p className="message">
+						{message}
+					</p>
+
+					<div className="username">
+						{username || 'Autor desconhecido'}
+					</div>
+				</div>
 			</div>
 		)
 	}

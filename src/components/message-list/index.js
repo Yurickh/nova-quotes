@@ -32,8 +32,9 @@ export default class MessageList extends Component {
 					messages.reverse().map(message => (
 						<MessageCard
 							key={message.id}
-							username={message.user_name}
+							username={message.username}
 							message={message.message}
+							avatar={message.avatar}
 						/>
 					))
 				}

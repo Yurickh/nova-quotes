@@ -2,7 +2,9 @@
 @import 'ambience/breakpoints';
 
 .message-card {
+  display: flex;
   overflow: hidden;
+  align-items: flex-start;
 
   padding: 1em;
 
@@ -10,19 +12,38 @@
   background-color: #FFF;
   box-shadow: 0 0 3px 0 #000;
 
-  & > .username {
+  & > .avatar {
+    overflow: hidden;
+
+    width: 72px;
+    height: 72px;
+
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+  }
+
+  & > .info {
+    flex: 2;
+
+    @include responsive(margin-left, 16, 16);
+  }
+
+  & > .info > .username {
+    font-size: .8em;
     font-weight: $weight-hairline;
 
+    text-align: right;
     letter-spacing: 1px;
   }
 
-  & > .message {
+  & > .info > .message {
     position: relative;
 
     margin-top: .5em;
   }
 
-  & > .message::before {
+  & > .info > .message::before {
     position: absolute;
 
     display: block;
@@ -36,7 +57,7 @@
     @include responsive(top, -20, -20);
   }
 
-  & > .message::after {
+  & > .info > .message::after {
     position: absolute;
     bottom: -90px;
 
